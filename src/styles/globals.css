@@ -1,3 +1,37 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
+
+:root {
+    --color-primary: #10a37f;
+    --color-secondary: #715fde;
+    --color-error: #ef4146;
+    --gradient-primary: linear-gradient(90deg,#a29bd4,#989fdd);
+    --text-primary: #202123;
+    --text-default: #353740;
+    --text-secondary: #6e6e80;
+    --text-disabled: #acacbe;
+    --text-error: var(--color-error);
+    
+    /* Dark mode colors */
+    --color-body: #343541;
+    --text-color: #f7f7f8;
+
+    /* Light mode colors */
+    /* --color-body: #f7f7f8; */
+    /* --text-color: #000000; */
+}
+
+@layer utilities {
+    .btn-primary {
+        @apply bg-[var(--color-primary)] text-white;
+    }
+
+    .btn-primary:hover {
+        @apply bg-[rgb(26,127,100)];
+    }
+
+    .btn {
+        @apply items-center border-transparent rounded border inline-flex text-sm leading-5 py-2 px-3 pointer-events-auto;
+    }
+}
