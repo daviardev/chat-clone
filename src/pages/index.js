@@ -1,7 +1,8 @@
+import Head from 'next/head'
 import { getProviders, useSession, getSession } from 'next-auth/react'
 
 import Login from '@/components/Login'
-import Head from 'next/head'
+import Sidebar from '@/components/Sidebar'
 
 export default function Home () {
   const { data: session } = useSession()
@@ -11,10 +12,11 @@ export default function Home () {
     <>
       <Head>
         <title>ChatGPT</title>
-        <link rel='icon' href='/favicon.png' />
       </Head>
 
-      Aquí se muestra el contenido una vez logueado
+      <div className='overflow-hidden w-full h-full relative flex z-1'>
+        <Sidebar />
+      </div>
     </>
   )
 }
