@@ -10,12 +10,12 @@ export default function Login () {
       <Head>
         <title>ChatGPT</title>
       </Head>
-      <main className='bg-[var(--color-body)] h-screen flex flex-1 justify-center items-center flex-col'>
+      <main className='h-screen flex flex-1 justify-center items-center flex-col'>
         <div className='h-screen flex flex-1 justify-center items-center flex-col'>
           <div className='flex flex-col justify-center items-center'>
             <Logo />
-            <span className='mb-2 text-center text-[var(--text-color)]'>Welcome to ChatGPT</span>
-            <span className='mb-4 text-center text-[var(--text-color)]'>Log in with your OpenAI account to continue</span>
+            <span className='mb-2 text-center'>Welcome to ChatGPT</span>
+            <span className='mb-4 text-center'>Log in with your OpenAI account to continue</span>
           </div>
           <div className='flex flex-row gap-3'>
             <button className='btn flex justify-center gap-2 btn btn-primary' onClick={async () => await signIn('google')}>
